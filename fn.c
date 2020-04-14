@@ -49,9 +49,8 @@ void exec(char **aCmd,int patata, char *pName)
 			str = concat3(str,": ","not found");	
 			write(STDERR_FILENO,str, _strlen(pName)+ 14 +_strlen(_itoa(patata)));
 			write(STDERR_FILENO,"\n",2);
-		}		
-		/**perror(aCmd[0]);**/
-		exit(EXIT_FAILURE);
+		}
+		exit(0);
 	}
 	wait(&stat);
 	free_array(aCmd);
