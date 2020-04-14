@@ -1,11 +1,15 @@
 #include "libs.h"
-
+/**
+ *cmdArray - splting the string
+ *@str: char
+* Return: void.
+ */
 char **cmdArray(char *str)
 {
 	int i = 1, x = 3;
 	char **res, *tok, *text;
 	const char *d = " \n";
-		
+
 	text = malloc(_strlen(str) + 1);
 	if (text == NULL)
 	{
@@ -27,9 +31,15 @@ char **cmdArray(char *str)
 	free(text);
 	return (res);
 }
+/**
+ *exec - execute the commande
+ *@aCmd: char
+ *@patata: int
+ *@pName: char
+ *return: nothing(mean true)
+ */
 
-
-void exec(char **aCmd,int patata, char *pName)
+void exec(char **aCmd, int patata, char *pName)
 {
 	int frk, stat;
 	char *str;
@@ -43,27 +53,34 @@ void exec(char **aCmd,int patata, char *pName)
 		perror(getEnv("_"));
 	else if (frk == 0)
 	{
-		if ( 0 > execve(aCmd[0], aCmd, environ) )
+		if (execve(aCmd[0], aCmd, environ) < 0)
 		{
-			str = concat3(pName,": ",_itoa(patata));
-			str = concat3(str,": ","not found");	
-			write(STDERR_FILENO,str, _strlen(pName)+ 14 +_strlen(_itoa(patata)));
-			write(STDERR_FILENO,"\n",2);
+			str = concat3(pName, ": ", _itoa(patata));
+			str = concat3(str, ": ", "not found");
+			write(STDERR_FILENO, str, _strlen(pName) + 14 + _strlen(_itoa(patata)));
+			write(STDERR_FILENO, "\n", 2);
 		}
 		exit(0);
 	}
 	wait(&stat);
 	free_array(aCmd);
 }
+/**
+ *envs - get the environ
+ *@aCmd: char
+ *@patata: int
+ *@pName: char
+ *return: nothing(mean true)
+ */
 
-void envs(char **aCmd,int patata, char *pName)
+void envs(char **aCmd, int patata, char *pName)
 {
 
 	void (*func)(char **);
 	char *link, *path;
 
 	link = getEnv("PATH");
-	path = _path(link,aCmd[0]);
+	path = _path(link, aCmd[0]);
 	func = builds(aCmd);
 	if (func)
 	{
@@ -73,19 +90,23 @@ void envs(char **aCmd,int patata, char *pName)
 	{
 		free(aCmd[0]);
 		aCmd[0] = path;
-		exec(aCmd,patata,pName);
+		exec(aCmd, patata, pName);
 	}
 	else if (!path)
 	{
-		exec(aCmd,patata,pName);
+		exec(aCmd, patata, pName);
 	}
 
 }
-
+/**
+ *handler - initialisation dog
+ *@sig: int
+ *return: nothing(mean true)
+ */
 void handler(int sig)
 {
-    if (sig == SIGINT)
-    {
+	if (sig == SIGINT)
+	{
 		write(STDOUT_FILENO, "Shell $ ", 9);
-    }
+	}
 }

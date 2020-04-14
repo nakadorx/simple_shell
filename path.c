@@ -1,16 +1,24 @@
 #include "libs.h"
-
+/**
+ *builds - check the right function
+ *@aCmd: char
+ * Return: void.
+ */
 void(*builds(char **aCmd))(char **aCmd)
 {
-	if (!(_strcmp("exit",aCmd[0])))
+	if (!(_strcmp("exit", aCmd[0])))
 		return (shellExit);
-	else if (!(_strcmp("env",aCmd[0])))
+	else if (!(_strcmp("env", aCmd[0])))
 		return (shellEnv);
 	else if (!aCmd[0])
 		return (NULL);
 	return (0);
 }
-
+/**
+ *getEnv - write the environ
+ *@name: char
+ * Return: char.
+ */
 char *getEnv(char *name)
 {
 	int i = 0;
@@ -20,22 +28,27 @@ char *getEnv(char *name)
 		return (NULL);
 	while (environ[i])
 	{
-		if (!(_strcmp(environ[i],name)))
+		if (!(_strcmp(environ[i], name)))
 		{
-			res = (environ[i] + 1 + _strlen(name) );
+			res = (environ[i] + 1 + _strlen(name));
 			return (res);
 		}
 		i++;
 	}
 	return (0);
 }
-
+/**
+ **_path - check the path
+ *@links: char
+ *@name: char
+ * Return: char.
+ */
 char *_path(char *links, char *name)
 {
 	char *tok, *link;
 	list_t *head, *l2;
 	struct stat st;
-	
+
 	head = '\0';
 	link = _strdup(links);
 	tok = strtok(link, ":");
@@ -57,17 +70,24 @@ char *_path(char *links, char *name)
 	}
 	return (NULL);
 }
-
+/**
+ *shellExit - fonction of exit
+ *@array: char
+ *return: nothing(mean true)
+ */
 void shellExit(char **array)
 {
-    int ext = 0;
+	int ext = 0;
 
-    if (array[1])
-        ext = _atoi(array[1]);
-    exit(ext);
+	if (array[1])
+		ext = _atoi(array[1]);
+	exit(ext);
 }
-
-void shellEnv()
+/**
+ *shellEnv - get the envrion
+ *return: nothing(mean true)
+ */
+void shellEnv(void)
 {
 	int i;
 
@@ -75,5 +95,5 @@ void shellEnv()
 	{
 		write(STDOUT_FILENO, (const char *) environ[i], strlen(environ[i]));
 		write(STDOUT_FILENO, "\n", 2);
-	}	
+	}
 }
