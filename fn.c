@@ -86,6 +86,6 @@ void handler(int sig)
 {
     if (sig == SIGINT)
     {
-		write(STDOUT_FILENO, "\nShell $ ", 10);
+		write(STDOUT_FILENO, "Shell $ ", 10);
     }
 }
