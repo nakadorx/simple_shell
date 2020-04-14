@@ -87,9 +87,10 @@ void shellExit(char **array)
  *shellEnv - get the envrion
  *return: nothing(mean true)
  */
-void shellEnv(void)
+void shellEnv(char **array)
 {
 	int i;
+	(void) array;
 
 	for (i = 0; environ[i]; i++)
 	{

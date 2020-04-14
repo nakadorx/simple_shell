@@ -36,7 +36,7 @@ char *_path(char *links, char *name);
 void(*builds(char **arv))(char **arv);
 int _atoi(char *s);
 void shellExit(char **array);
-void shellEnv(void);
+void shellEnv(char **array);
 void freearv(char **arv);
 void free_list(list_t *head);
 int _strcmp(char *s1, char *s2);

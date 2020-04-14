@@ -29,7 +29,7 @@ int main(int argc, char *argv[])
 		if (tol == -1)
 		{
 			free(cmd);
-			write(STDOUT_FILENO, "\n", 2);
+			/**write(STDOUT_FILENO, "\n", 2);**/
 			exit(0);
 		}
 		aCmd = cmdArray(cmd);
