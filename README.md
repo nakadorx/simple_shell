@@ -1,3 +1,4 @@
+gcc-4.8 -g -Wall -Wextra -pedantic *.c -o shell
 # Shell project
 A simple Unix command line interpreter
 ## Description
