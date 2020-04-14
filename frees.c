@@ -1,5 +1,10 @@
 #include "libs.h"
-
+/**
+ * add_node_end - adding a node to the list
+ * @head: the pointer for the lsit
+ * @str: char
+ * Return: added node.
+ */
 list_t *add_node_end(list_t **head, char *str)
 {
 	list_t *nouveau = malloc(sizeof(list_t));
@@ -21,6 +26,14 @@ list_t *add_node_end(list_t **head, char *str)
 	}
 	return (*head);
 }
+
+/**
+ * _realloc - realocate a memory
+ * @ptr: the pointer for the memory
+ * @old_size: int
+ * @new_size: int
+ * Return: void.
+ */
 
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
@@ -55,6 +68,10 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 	}
 	return (nouveau);
 }
+/**
+ * free_list - freeing list
+ * @head: the pointer for the lsit
+ */
 
 void free_list(list_t *head)
 {
@@ -67,21 +84,31 @@ void free_list(list_t *head)
 		free(l);
 	}
 }
+/**
+ * free_array - freeing array
+ * @array: the pointer for the array
+ */
 
 void free_array(char **array)
 {
-    int i = 0;
+	int i = 0;
 
-    if (!array)
-        exit(0);
-    for (;array[i];i++)
-    {
-        free(array[i]);
-    }
-    free(array);
+	if (!array)
+		exit(0);
+	for (; array[i]; i++)
+	{
+		free(array[i]);
+	}
+	free(array);
 }
+/**
+ * frees - freeing array
+ * @head: the pointer for the lsit
+ * @aCmd: pointer for the array
+ * @cmd : char
+ */
 
-void frees(list_t *head, char **aCmd, char * cmd)
+void frees(list_t *head, char **aCmd, char *cmd)
 {
 	free_list(head);
 	free_array(aCmd);
