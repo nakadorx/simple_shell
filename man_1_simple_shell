@@ -1,0 +1,35 @@
+.TH SIMPLE_SHELL 2 "14 April 2020" "simple shell man page"
+
+
+.SH NAME
+.B Simple Shell
+- command interpreter [arguments]
+
+.SH SYNOPSIS
+The shell is executed by typing ./hsh
+
+.SH DESCRIPTION
+is a command language interpreter that executes commands read from standard input.
+
+.SH OVERVIEW
+simple_shell is a command line interpreter that works like the shell
+
+
+.SH BUILTINS functions
+
+.B pwd
+it shows the current directory of the process.
+
+.B env
+it prints the current environment
+
+.B exit
+it exits the shell
+
+.B help
+it displays information about builtin commands.
+
+.B history
+it displays the history list
+.SH AUTHOR
+Mouhamed Charfi, Montassar Daimi.
