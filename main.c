@@ -19,7 +19,7 @@ int main(int argc, char *argv[])
 	{
 		patata++;
 		if (isatty(STDIN_FILENO))
-			write(STDOUT_FILENO, "Shell$ ", 8);
+			write(STDOUT_FILENO, "#cisfun$ ", 10);
 		tol = getline(&cmd, &size, stdin);
 		if (cmd[0] == '\n')
 		{
@@ -29,7 +29,7 @@ int main(int argc, char *argv[])
 		if (tol == -1)
 		{
 			free(cmd);
-			/**write(STDOUT_FILENO, "\n", 2);**/
+			write(STDOUT_FILENO, "#cisfun$ ", 10);
 			exit(0);
 		}
 		aCmd = cmdArray(cmd);
