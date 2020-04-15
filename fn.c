@@ -8,7 +8,7 @@ char **cmdArray(char *str)
 {
 	int i = 1, x = 3;
 	char **res, *tok, *text;
-	const char *d = " \n";
+	const char *d = " \t\r\n\a\v:";
 
 	text = malloc(_strlen(str) + 1);
 	if (text == NULL)
