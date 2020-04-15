@@ -1,7 +1,7 @@
 #include "libs.h"
 
 /**
- * allspace - espace
+ * allspace - espaces
  * @cmd : int
  * Return: 0.
  */
