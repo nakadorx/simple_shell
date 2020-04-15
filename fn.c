@@ -42,8 +42,7 @@ char **cmdArray(char *str)
 void exec(char **aCmd, int patata, char *pName)
 {
 	int frk, stat;
-	(void) patata;
-	(void) pName;
+	char *str;
 
 	if (!aCmd)
 	{
@@ -54,8 +53,13 @@ void exec(char **aCmd, int patata, char *pName)
 		perror(getEnv("_"));
 	else if (frk == 0)
 	{
-		execve(aCmd[0], aCmd, environ);
-		perror(aCmd[0]);
+		if (execve(aCmd[0], aCmd, environ) < 0)
+		{
+			str = concat3(pName, ": ", _itoa(patata));
+			str = concat3(str, ": ", "not found");
+			write(STDERR_FILENO, str, _strlen(pName) + 14 + _strlen(_itoa(patata)));
+			write(STDERR_FILENO, "\n", 2);
+		}
 		exit(0);
 	}
 	wait(&stat);
