@@ -11,6 +11,8 @@ st_fn.c
 free.c
 main.c
 str_fn.c
+str_fn_2.c
+path.c
 ## Usage
 gcc -Wall -Werror -Wextra -pedantic *.c -o hsh
 ### Compile the C files in this way
