@@ -30,11 +30,11 @@ The project has been tested on Ubuntu 14.05
 	- **freearv** -> free an array 
 	- **free_list** -> freeing list
 	- **_strcmp** -> compare tow strings
-	- **free_array** ->
-	- **frees** -> 
+	- **free_array** -> freeing array
+	- **frees** -> free all the arrays
 	- **handler** -> give signal
 	- **envs** ->  get the environ
-	- **_itoa**
+	- **_itoa** -> from int to char
 ## Usage
 gcc -Wall -Werror -Wextra -pedantic *.c -o hsh
 ### Compile the C files in this way
