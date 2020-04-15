@@ -84,8 +84,9 @@ void shellExit(char **array)
 	exit(ext);
 }
 /**
- *shellEnv - get the envrion
- *return: nothing(mean true)
+ * shellEnv - get the envrion
+ * @array: acmd
+ * return: nothing(mean true)
  */
 void shellEnv(char **array)
 {
