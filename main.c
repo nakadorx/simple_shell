@@ -1,11 +1,8 @@
 #include "libs.h"
 
 /**
-<<<<<<< HEAD
  * allspace - espace
  * @cmd : int
-=======
->>>>>>> f1d3c2a9afdeedcd69325c6b8f67060153927ea8
  * Return: 0.
  */
 int allspace(char *cmd)
