@@ -18,11 +18,11 @@ The project has been tested on Ubuntu 14.05
 	- **concat3** -> concat 3 string
 	- **cmdArray** -> splting the string
 	- **exec** ->  execute the commande
-	- **_realloc** -> 
-	- **getEnv** ->  
-	- **add_node_end** -> 
-	- **_path** -> 
-	- **builds** -> 
+	- **_realloc** -> realocate a memory
+	- **getEnv** ->  write the environ
+	- **add_node_end** -> adding a node to the list
+	- **_path** ->  check the path
+	- **builds** -> check the right function
 	- **_atoi** -> from string to number
 	- **shellExit** -> 
 	- **shellEnv** -> 
