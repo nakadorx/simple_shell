@@ -35,12 +35,16 @@ The project has been tested on Ubuntu 14.05
 	- **handler** -> give signal
 	- **envs** ->  get the environ
 	- **_itoa** -> from int to char
+
 ## Usage
+
 gcc -Wall -Werror -Wextra -pedantic *.c -o hsh
 ### Compile the C files in this way
-./hsh
 
+./hsh
 #### Run the shell
+## Acknowledgment
+thanks to C language and holberton school  and checker. 
 
 ## Contributing
 ### Mouhamed Charfi
