@@ -12,6 +12,29 @@ The project has been tested on Ubuntu 14.05
 ### str_fn.c
 ### str_fn_2.c
 ### path.c
+## Table of function
+- **_strlen** -> 
+	- **_strdup** -> 
+	- **concat3** ->
+	- **cmdArray** ->
+	- **exec** -> 
+	- **_realloc** -> 
+	- **getEnv** ->  
+	- **add_node_end** -> 
+	- **_path** -> 
+	- **builds** -> 
+	- **_atoi** -> 
+	- **shellExit** -> 
+	- **shellEnv** -> 
+	- **shellEnv** -> 
+	- **freearv** -> 
+	- **free_list** -> 
+	- **_strcmp** -> 
+	- **free_array** ->
+	- **frees** -> 
+	- **enhandlerv** -> 
+	- **envs** ->  
+	- **_itoa**
 ## Usage
 gcc -Wall -Werror -Wextra -pedantic *.c -o hsh
 ### Compile the C files in this way
