@@ -8,6 +8,9 @@ The project has been tested on Ubuntu 14.05
 ## Table of file
 fn.c
 st_fn.c
+free.c
+main.c
+str_fn.c
 ## Usage
 gcc -Wall -Werror -Wextra -pedantic *.c -o hsh
 ### Compile the C files in this way
