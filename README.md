@@ -1,4 +1,3 @@
-gcc-4.8 -g -Wall -Wextra -pedantic *.c -o shell
 # Shell project
 A simple Unix command line interpreter
 ## Description
@@ -21,5 +20,6 @@ gcc -Wall -Werror -Wextra -pedantic *.c -o hsh
 #### Run the shell
 
 ## Contributing
-Mouhamed Charfi and Montassar Daimi
+###Mouhamed Charfi
+###Montassar Daimi
 
