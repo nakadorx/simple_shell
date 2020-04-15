@@ -5,13 +5,13 @@ This is a project about creating a simple version of the standard command interp
 ## Environment
 The project has been tested on Ubuntu 14.05
 ## Table of file
-fn.c
-st_fn.c
-free.c
-main.c
-str_fn.c
-str_fn_2.c
-path.c
+### fn.c
+### st_fn.c
+### free.c
+### main.c
+### str_fn.c
+### str_fn_2.c
+### path.c
 ## Usage
 gcc -Wall -Werror -Wextra -pedantic *.c -o hsh
 ### Compile the C files in this way
@@ -20,6 +20,6 @@ gcc -Wall -Werror -Wextra -pedantic *.c -o hsh
 #### Run the shell
 
 ## Contributing
-###Mouhamed Charfi
-###Montassar Daimi
+### Mouhamed Charfi
+### Montassar Daimi
 
