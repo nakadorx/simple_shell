@@ -94,7 +94,7 @@ void shellEnv(char **array)
 
 	for (i = 0; environ[i]; i++)
 	{
-		write(STDOUT_FILENO, (const char *) environ[i], strlen(environ[i]));
+		write(STDOUT_FILENO, (const char *) environ[i], _strlen(environ[i]));
 		write(STDOUT_FILENO, "\n", 1);
 	}
 }

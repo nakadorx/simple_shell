@@ -15,7 +15,7 @@ list_t *add_node_end(list_t **head, char *str)
 	nouveau->next = NULL;
 	if (!str)
 		return (NULL);
-	nouveau->dName = strdup(str);
+	nouveau->dName = _strdup(str);
 	if (tmp == NULL)
 		*head = nouveau;
 	else
