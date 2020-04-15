@@ -24,11 +24,11 @@ The project has been tested on Ubuntu 14.05
 	- **_path** ->  check the path
 	- **builds** -> check the right function
 	- **_atoi** -> from string to number
-	- **shellExit** -> 
-	- **shellEnv** -> 
-	- **shellEnv** -> 
-	- **freearv** -> 
-	- **free_list** -> 
+	- **shellExit** -> function of exit
+	- **shellEnv** -> get the envrion
+	- **shellEnv** -> get the envrion
+	- **freearv** -> free an array 
+	- **free_list** -> freeing list
 	- **_strcmp** -> compare tow strings
 	- **free_array** ->
 	- **frees** -> 
