@@ -50,7 +50,7 @@ void exec(char **aCmd, int patata, char *pName)
 	}
 	frk = fork();
 	if (frk == -1)
-		perror(getEnv("_"));
+		perror(stat);
 	else if (frk == 0)
 	{
 		if (execve(aCmd[0], aCmd, environ) < 0)
