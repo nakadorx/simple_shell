@@ -95,10 +95,7 @@ void free_array(char **array)
 
 	if (!array)
 		exit(0);
-	for (; array[i]; i++)
-	{
-		free(array[i]);
-	}
+
 	free(array);
 }
 /**
