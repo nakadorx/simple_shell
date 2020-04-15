@@ -44,5 +44,5 @@ char *_itoa(int x)
 	str[i] = (x % 10) + '0';
 	rev_string(str);
 	str[i + 1] = '\0';
-	
+	return (str);
 }
