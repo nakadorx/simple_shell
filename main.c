@@ -1,9 +1,8 @@
 #include "libs.h"
 
 /**
- * main - shell main
- * @argc : int
- * @argv : **char
+ * allspace -check space
+ * @cmd : char
  * Return: 0.
  */
 int allspace(char *cmd)
