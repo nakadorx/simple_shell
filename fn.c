@@ -53,7 +53,7 @@ void exec(char **aCmd, int patata, char *pName)
 		perror(getEnv("_"));
 	else if (frk == 0)
 	{
-		if (execve(aCmd[0], aCmd, NULL) < 0)
+		if (execve(aCmd[0], aCmd, environ) < 0)
 		{
 			str = concat3(pName, ": ", _itoa(patata));
 			str = concat3(str, ": ", "not found");
@@ -107,6 +107,6 @@ void handler(int sig)
 {
 	if (sig == SIGINT)
 	{
-		write(STDOUT_FILENO, "#cisfun$ ", 10);
+		write(STDOUT_FILENO, "\n#cisfun$ ", 10);
 	}
 }
