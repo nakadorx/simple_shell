@@ -75,7 +75,7 @@ int _strlen(char *s)
 	return (i);
 }
 /**
- *_strcmp - write the environ
+ *_strcmp - compare tow strings
  *@s1: char
  *@s2: char
  * Return: char.

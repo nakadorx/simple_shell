@@ -13,7 +13,7 @@ The project has been tested on Ubuntu 14.05
 ### str_fn_2.c
 ### path.c
 ## Table of function
-- **_strlen** -> 
+- **_strlen** -> give the lenght of string
 	- **_strdup** -> 
 	- **concat3** ->
 	- **cmdArray** ->
@@ -23,13 +23,13 @@ The project has been tested on Ubuntu 14.05
 	- **add_node_end** -> 
 	- **_path** -> 
 	- **builds** -> 
-	- **_atoi** -> 
+	- **_atoi** -> from string to number
 	- **shellExit** -> 
 	- **shellEnv** -> 
 	- **shellEnv** -> 
 	- **freearv** -> 
 	- **free_list** -> 
-	- **_strcmp** -> 
+	- **_strcmp** -> compare tow strings
 	- **free_array** ->
 	- **frees** -> 
 	- **enhandlerv** -> 
