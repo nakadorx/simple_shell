@@ -14,10 +14,10 @@ The project has been tested on Ubuntu 14.05
 ### path.c
 ## Table of function
 - **_strlen** -> give the lenght of string
-	- **_strdup** -> 
-	- **concat3** ->
-	- **cmdArray** ->
-	- **exec** -> 
+	- **_strdup** -> duplicate the char
+	- **concat3** -> concat 3 string
+	- **cmdArray** -> splting the string
+	- **exec** ->  execute the commande
 	- **_realloc** -> 
 	- **getEnv** ->  
 	- **add_node_end** -> 
@@ -32,8 +32,8 @@ The project has been tested on Ubuntu 14.05
 	- **_strcmp** -> compare tow strings
 	- **free_array** ->
 	- **frees** -> 
-	- **enhandlerv** -> 
-	- **envs** ->  
+	- **handler** -> give signal
+	- **envs** ->  get the environ
 	- **_itoa**
 ## Usage
 gcc -Wall -Werror -Wextra -pedantic *.c -o hsh
