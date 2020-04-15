@@ -1,23 +1,27 @@
 #include "libs.h"
 
 /**
+ * allspace - espace
+ * @cmd : int
+ * Return: 0.
+ */
+int allspace(char *cmd)
+{
+	int i;
+
+	for (i = 0; i < _strlen(cmd) - 1; i++)
+	{
+		if (cmd[i] != ' ')
+			return (0);
+	}
+	return (1);
+}
+/**
  * main - shell main
  * @argc : int
  * @argv : **char
  * Return: 0.
  */
-int allspace(char *cmd)
-{
-	int i ;
-
-	for (i = 0; i < _strlen(cmd) - 1; i++ )
-	{
-		if (cmd[i] != ' ' )
-			return (0);
-			
-	}
-	return (1);
-}
 int main(int argc, char *argv[])
 {
 	int patata = argc - 1;
