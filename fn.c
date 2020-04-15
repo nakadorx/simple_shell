@@ -99,7 +99,7 @@ void envs(char **aCmd, int patata, char *pName)
 
 }
 /**
- *handler - initialisation dog
+ *handler - give signal 
  *@sig: int
  *return: nothing(mean true)
  */
