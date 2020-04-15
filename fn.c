@@ -18,12 +18,12 @@ char **cmdArray(char *str)
 	}
 	text = _strdup(str);
 	tok = strtok(text, d);
-	res = malloc((sizeof(char *) * 2));
+	res = malloc((1 * 2));
 	res[0] = _strdup(tok);
 	while (tok)
 	{
 		tok = strtok(NULL, d);
-		res = _realloc(res, (sizeof(char *) * (x - 1)), (sizeof(char *) * x));
+		res = _realloc(res, (1 * (x - 1)), (sizeof(char *) * x));
 		res[i] = _strdup(tok);
 		x++;
 		i++;
