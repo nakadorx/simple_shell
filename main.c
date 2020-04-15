@@ -6,6 +6,18 @@
  * @argv : **char
  * Return: 0.
  */
+int allspace(char *cmd)
+{
+	int i ;
+
+	for (i = 0; i < _strlen(cmd) - 1; i++ )
+	{
+		if (cmd[i] != ' ' )
+			return (0);
+			
+	}
+	return (1);
+}
 int main(int argc, char *argv[])
 {
 	int patata = argc - 1;
@@ -21,7 +33,7 @@ int main(int argc, char *argv[])
 		if (isatty(STDIN_FILENO))
 			write(STDOUT_FILENO, "#cisfun$ ", 10);
 		tol = getline(&cmd, &size, stdin);
-		if (cmd[0] == '\n')
+		if (cmd[0] == '\n' || allspace(cmd))
 		{
 			free(cmd);
 			main(patata + 1, argv);
